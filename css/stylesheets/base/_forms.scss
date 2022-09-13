@@ -30,35 +30,36 @@ textarea {
   font-size: 1rem;
 }
 
-[type="color"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="search"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
+[type='color'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
 input:not([type]),
 textarea {
   appearance: none;
-  background-color: transparent;
+	-webkit-tap-highlight-color : transparent !important;
+  // background-color: transparent;
   border: var(--border);
   border-radius: var(--border-radius);
   box-shadow: var(--form-box-shadow);
   box-sizing: border-box;
   margin-bottom: var(--spacing--small);
   padding: calc(var(--spacing) / 3);
-  transition: border-color var(--duration) var(--timing);
+  transition: all var(--duration) var(--timing);
   width: 100%;
 
   &:focus {
-    box-shadow: var(--form-box-shadow-focus);
+    // box-shadow: var(--form-box-shadow-focus);
   }
 
   &:disabled {
@@ -70,12 +71,11 @@ textarea {
   }
 
   &::placeholder {
-    color: $font-color--base;
-    opacity: 0.25;
+    color: lightgray;
   }
 }
 
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield;
 }
 
@@ -83,13 +83,13 @@ textarea {
   resize: vertical;
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   display: inline;
   margin-right: var(--spacing--small);
 }
 
-[type="file"] {
+[type='file'] {
   margin-bottom: var(--spacing--small);
   width: 100%;
 }
@@ -99,9 +99,9 @@ select {
   width: 100%;
 }
 
-[type="checkbox"],
-[type="radio"],
-[type="file"],
+[type='checkbox'],
+[type='radio'],
+[type='file'],
 select {
   &:focus {
     outline: var(--focus-outline);

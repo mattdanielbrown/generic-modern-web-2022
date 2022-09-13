@@ -1,1 +1,22 @@
 
+.demo-heading-group {
+	hgroup {
+		margin : 0 auto !important;
+		width : 100%;
+		max-width : unset !important;
+		display : block;
+		padding : 0 !important;
+		h1,h2,h3,h4,h5,h6 {
+			line-height : 1 !important;
+			margin : 0 auto 1rem !important;
+			padding : 0;
+		}
+	}
+}
+
+.demo-paragraph,.demo-paragraph,.demo-preformatted-styles {
+	p {
+		line-height : 1.75 !important;
+		margin : 0 auto !important;
+	}
+}
