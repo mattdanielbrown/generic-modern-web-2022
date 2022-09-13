@@ -1,0 +1,60 @@
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function color-tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function color-shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
+@function hover-color($color:$primary-color) {
+  @return darken($color, $hover-color-adjustment);
+}
+@function focus-color($color:$primary-color) {
+  @return darken($color, $hover-color-adjustment);
+}
+@function active-color($color:$primary-color) {
+  @return darken($color, $hover-color-adjustment);
+}
+
+@function hoverColor($color:$primary-color) {
+  @return darken($color, $hover-color-adjustment);
+}
+@function focusColor($color:$primary-color) {
+  @return darken($color, $hover-color-adjustment);
+}
+@function activeColor($color:$primary-color) {
+  @return darken($color, $hover-color-adjustment);
+}
+
+@function action-adjusted-color($color: $primary-color, $action: hover) {
+  @if($action == focus) {
+    @return focus-color($color);
+  }
+  @else if($action == active) {
+    @return active-color($color);
+  }
+  @else {
+    @return hover-color($color);
+  }
+}
+@function actionAdjustedColor($color: $primary-color, $action: hover) {
+  @if ($action == focus) {
+    @return focus-color($color);
+  } @else if ($action == active) {
+    @return active-color($color);
+  } @else {
+    @return hover-color($color);
+  }
+}

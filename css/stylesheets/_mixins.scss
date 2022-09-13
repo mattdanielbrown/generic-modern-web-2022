@@ -1,0 +1,163 @@
+
+//——————————————————————————————————————————————————————————————————————————————
+// Media Queries
+//——————————————————————————————————————————————————————————————————————————————
+
+@mixin at-least($device-width) {
+  @media screen and (min-width : $device-width) {
+    @content
+  }
+}
+@mixin atLeast($device-width) {
+  @media screen and (min-width : $device-width) {
+    @content
+  }
+}
+@mixin after($device-width) {
+  @media screen and (min-width : $device-width) {
+    @content
+  }
+}
+@mixin smaller-than($device-width) {
+  @media screen and (min-width : $device-width) {
+    @content
+  }
+}
+@mixin smallerThan($device-width) {
+  @media screen and (min-width : $device-width) {
+    @content
+  }
+}
+
+@mixin up-until($device-width) {
+  @media screen and (max-width : $device-width - 1) {
+    @content
+  }
+}
+@mixin upUntil($device-width) {
+  @media screen and (max-width : $device-width - 1) {
+    @content
+  }
+}
+@mixin until($device-width) {
+  @media screen and (max-width : $device-width - 1) {
+    @content
+  }
+}
+@mixin before($device-width) {
+  @media screen and (max-width : $device-width - 1) {
+    @content
+  }
+}
+@mixin larger-than($device-width) {
+  @media screen and (max-width : $device-width - 1) {
+    @content
+  }
+}
+@mixin largerThan($device-width) {
+  @media screen and (max-width : $device-width - 1) {
+    @content
+  }
+}
+
+//——————————————————————————————————————————————————————————————————————————————
+// Hover/Focus/Active State Adjustments
+//——————————————————————————————————————————————————————————————————————————————
+
+@mixin set-adjusted-colors-for-property($color:$primary-color, $property:'background-color') {
+
+  $_original-color: $color;
+  $_hover-color : hover-color($color);
+  $_focus-color : focus-color($color);
+  $_active-color: active-color($color);
+
+  #{$property} : $_original-color;
+
+  &:hover {
+    #{$property} : $_hover-color;
+  }
+  &:focus {
+    #{$property} : $_focus-color;
+  }
+  &:active {
+    #{$property} : $_active-color;
+  }
+}
+
+@mixin set-adjusted-background-colors($color: $primary-color) {
+  $_original-color : $color;
+  $_hover-color    : hover-color($color);
+  $_focus-color    : focus-color($color);
+  $_active-color   : active-color($color);
+  background-color : $_original-color;
+  &:hover {
+    background-color : $_hover-color;
+  }
+  &:focus {
+    background-color : $_focus-color;
+  }
+  &:active {
+    background-color : $_active-color;
+  }
+}
+@mixin set-adjusted-border-colors($color: $primary-color) {
+  $_original-color : $color;
+  $_hover-color    : hover-color($color);
+  $_focus-color    : focus-color($color);
+  $_active-color   : active-color($color);
+  border-color : $_original-color;
+  &:hover {
+    border-color : $_hover-color;
+  }
+  &:focus {
+    // border-color : $_focus-color;
+  }
+  &:active {
+    border-color : $_active-color;
+  }
+}
+@mixin set-adjusted-text-colors($color: $primary-color) {
+  $_original-color : $color;
+  $_hover-color    : hover-color($color);
+  $_focus-color    : focus-color($color);
+  $_active-color   : active-color($color);
+  color : $_original-color;
+  &:hover {
+    color : $_hover-color;
+  }
+  &:focus {
+    color : $_focus-color;
+  }
+  &:active {
+    color : $_active-color;
+  }
+}
+
+//——————————————————————————————————————————————————————————————————————————————
+// Visually hidden
+//——————————————————————————————————————————————————————————————————————————————
+@mixin hide-visually($toggle: 'hide') {
+	@if not index('hide' 'unhide', $toggle) {
+		@error '`#{$toggle}` is not a valid value for the `$toggle` argument in ' +
+      'the `hide-visually` mixin. Must be either `hide` or `unhide`.';
+	} @else if $toggle == 'hide' {
+		border      : 0;
+		// clip: rect(1px, 1px, 1px, 1px);
+		clip        : rect(0, 0, 0, 0);
+		clip-path   : inset(100%);
+		height      : 1px;
+		overflow    : hidden;
+		padding     : 0;
+		position    : absolute;
+		white-space : nowrap;
+		width       : 1px;
+	} @else if $toggle == 'unhide' {
+		clip        : auto;
+		clip-path   : none;
+		height      : auto;
+		overflow    : visible;
+		position    : static;
+		white-space : inherit;
+		width       : auto;
+	}
+}

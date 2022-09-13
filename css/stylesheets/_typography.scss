@@ -1,0 +1,46 @@
+
+html, body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, label,
+blockquote, q, ul, li, ol, dl, dd, dt, nav, form, fieldset, img, figcaption,
+figure, summary, details, address {
+  line-height : 1;
+  color       : $text-color;
+  margin      : 0;
+  padding     : 0;
+  display     : block;
+  font-family : $font-family;
+}
+
+p {
+  line-height   : 1.5;
+  font-size     : 1em;
+  margin-bottom : 1em;
+}
+
+* ~ p {
+  margin-bottom : 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height : 1;
+  font-weight : 600;
+  margin      : 1rem auto;
+  /* color: #454545; */
+  small {
+    display     : block;
+    font-weight : 500;
+    margin-top  : .5rem;
+  }
+}
+
+a, a:link, a:visited {
+  text-decoration  : none;
+  color            : $primary-color;
+  line-height      : inherit;
+  font-weight      : 500;
+  cursor           : pointer;
+  transition       : $default-transition;
+  background-color : transparent;
+  border           : solid 2px transparent;
+  @include set-adjusted-text-colors($primary-color);
+  @extend %set-focus-effect;
+}

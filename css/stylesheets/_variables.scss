@@ -1,0 +1,196 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Font Stacks
+//——————————————————————————————————————————————————————————————————————————————
+
+/* System / Fallback */
+
+$font-family-fallback: system-ui, system-sans, -apple-system, BlinkMacSystemFont,
+'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+/* Intended Primary Font */
+
+$font-family-inter       : 'Inter', 'Inter UI', Inter, Inter UI;
+
+/* Combined Intended Primary Font With Fallback Font Stack */
+
+$font-family             : $font-family-inter, $font-family-fallback;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Colors
+//——————————————————————————————————————————————————————————————————————————————
+
+/* General */
+
+$light-gray-blue         : #a3aebf;
+$gray-blue               : #4c5567;
+$dark-gray-blue          : #2f3747;
+$darkest-gray-blue       : #1b202b;
+$medium-blue             : #6a80e3;
+
+/* OpenColor.io */
+
+$athens-gray             : #f8f9fa;
+$athens-gray-1           : #f1f3f5;
+$athens-gray-2           : #e9ecef;
+$athens-gray-3           : #dfe2e6;
+$iron                    : #cfd4d9;
+$bombay                  : #aeb5bc;
+$oslo-gray               : #878e95;
+$abbey                   : #4a5056;
+$outer-space             : #353a3f;
+$shark                   : #222529;
+$linen                   : #fdf5f5;
+$linen-1                 : #fae4e3;
+$azalea                  : #f7cbca;
+$wewak                   : #f3acaa;
+$apricot                 : #f08d8a;
+$froly                   : #ee7470;
+$mandy                   : #e85e59;
+$valencia                : #de4d47;
+$persian-red             : #cf423a;
+$well-read               : #b93933;
+$carousel-pink           : #fcf1f6;
+$cherub                  : #fadfea;
+$azalea                  : #f3c4d6;
+$kobi                    : #eea6c0;
+$carissma                : #e88aab;
+$deep-blush              : #df6e94;
+$cranberry               : #d55680;
+$mulberry                : #c5436c;
+$night-shadz             : #b3365c;
+$stiletto                : #992d4d;
+$white-lilac             : #f7f0fb;
+$moon-raker              : #efdaf8;
+$perfume-2               : #e6c1f6;
+$perfume-3               : #da9ef1;
+$lavender                : #cc7feb;
+$lavender-1              : #be67e1;
+$amethyst                : #b057d4;
+$amethyst-1              : #a14ac2;
+$studio                  : #9041af;
+$vivid-violet            : #7c3797;
+$selago                  : #f2f0fe;
+$selago-1                : #e3dcfc;
+$perfume                 : #cdc1fa;
+$portage-1               : #ac9af5;
+$portage-2               : #917af2;
+$cornflower-blue         : #7d64ee;
+$royal-blue              : #7257e9;
+$royal-blue-1            : #6950df;
+$purple-heart            : #6048d1;
+$blue-violet             : #5943bd;
+$hawkes-blue             : #eef2fe;
+$hawkes-blue-1           : #dce4fd;
+$tropical-blue           : #bcc8fb;
+$jordy-blue              : #94a8f8;
+$cornflower-blue-2       : #7891f5;
+$cornflower-blue-3       : #617ef2;
+$royal-blue              : #5171ed;
+$royal-blue-1            : #4766e3;
+$mariner                 : #405ed3;
+$governor-bay            : #3952c0;
+$solitude                : #e9f5fe;
+$hawkes-blue             : #d5eafd;
+$sail                    : #afd7fb;
+$malibu                  : #84bff7;
+$cornflower-blue-2       : #64aaf1;
+$cornflower-blue-3       : #509ae9;
+$havelock-blue           : #428bdf;
+$mariner                 : #3a7ecf;
+$astral                  : #3471bc;
+$azure                   : #2e64a6;
+$white-ice               : #e7f9fb;
+$humming-bird            : #cef5f9;
+$blizzard-blue           : #aae7f0;
+$aquamarine-blue         : #83d7e5;
+$viking                  : #67c6d8;
+$shakespeare             : #57b6cc;
+$fountain-blue           : #4da8bc;
+$fountain-blue           : #4da8bc;
+$steel-blue              : #4496aa;
+$calypso                 : #3a8396;
+$calypso                 : #317083;
+$ottoman                 : #eefaef;
+$blue-romance            : #daf7db;
+$madang                  : #bff0bf;
+$granny-smith-apple      : #a2e6a1;
+$feijoa                  : #87d786;
+$mantis                  : #75cb72;
+$fern                    : #67bc63;
+$fern-1                  : #5daf59;
+$fruit-salad             : #529b4f;
+$hippie-green            : #488747;
+$feta                    : #f6fbe5;
+$orinoco                 : #ecf9cd;
+$gossip                  : #def3ab;
+$yellow-green            : #c9e884;
+$conifer                 : #b5e064;
+$conifer-1               : #a3d54f;
+$sushi                   : #92c644;
+$sushi-1                 : #84b53c;
+$sushi-2                 : #75a534;
+$wasabi                  : #69912e;
+$half-dutch-white        : #fef9de;
+$beeswax                 : #fdf3c5;
+$drover                  : #fceba3;
+$marigold-yellow         : #fae079;
+$energy-yellow           : #f9d45b;
+$casablanca              : #f4c548;
+$tulip-tree              : #f0b23f;
+$tulip-tree-1            : #e9a239;
+$fire-bush               : #e39034;
+$brandy-punch            : #d87c2e;
+$old-lace                : #fdf4e7;
+$champagne               : #fbe8cf;
+$peach-yellow            : #f9d9ae;
+$manhattan               : #f6c283;
+$sandy-brown             : #f3ac5f;
+$jaffa                   : #f19645;
+$jaffa-1                 : #ed8437;
+$zest                    : #e66f2e;
+$flame-pea               : #d8622b;
+$piper                   : #c95228;
+
+/* Thematic */
+
+$primary-color           : $royal-blue;
+$color--primary          : $royal-blue;
+$secondary-color         : $shark;
+$color--secondary        : $shark;
+$danger-color            : $mandy;
+$color--danger           : $mandy;
+$success-color           : $fern;
+$color--success          : $fern;
+
+/* Specific */
+
+$text-color              : $dark-gray-blue;
+$navbar-color            : $shark;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Values
+//——————————————————————————————————————————————————————————————————————————————
+
+/* Interaction Adjustments */
+
+$hover-color-adjustment  : 8%;
+$focus-color-adjustment  : 16%;
+$active-color-adjustment : 24%;
+
+/* Focus Effect Values */
+
+$focus-fx--base-color    : $primary-color;
+$focus-fx--alpha         : 0.25;
+$focus-fx--width         : 6px;
+$focus-fx--style         : solid;
+$focus-fx--offset        : -2px;
+
+$focus-fx--faded-color   : rgba($focus-fx--base-color, $focus-fx--alpha);
+$focus-fx-outline        : $focus-fx--style $focus-fx--width $focus-fx--faded-color;
+
+$focus-fx-border         : solid 2px $primary-color;
+$focus-fx                : $focus-fx-outline;
+
+/* Transitions */
+
+$default-transition      : all 120ms ease-out;

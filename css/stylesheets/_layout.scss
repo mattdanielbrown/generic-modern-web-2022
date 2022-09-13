@@ -1,0 +1,83 @@
+
+//noinspection CssOverwrittenProperties
+%container {
+  width     : 92%;
+  max-width : 768px;
+  max-width : 65ch;
+  margin    : 0 auto;
+}
+
+.container, section, article, hgroup {
+  @extend %container;
+}
+
+ul {
+  @extend %list-reset;
+
+}
+
+.button-list, .buttons-list, ul.buttons {
+  @extend %list-reset;
+
+}
+
+html {
+	scroll-behavior : smooth;
+}
+html,body {
+	width : 100vw;
+	min-width : 320px;
+	max-width : 100vw;
+	height : 100% !important;
+	min-height : 100vh;
+	overflow-x : hidden;
+}
+
+body {
+  display : flex !important;
+  flex-direction : column;
+	min-width : 100vw;
+  justify-content : space-between;
+
+  & > header:first-of-type,
+  & > footer:last-of-type {
+    padding : 2em 0;
+    background-color : whitesmoke;
+    margin : 0;
+    width : 100%;
+  }
+
+  & > header:first-of-type {
+
+  }
+  & > footer:last-of-type {
+    text-align : center;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    align-content : center;
+    justify-content : center;
+    vertical-align : middle;
+    p {
+      font-size : small;
+      font-weight : 500;
+      text-align : center;
+      margin : 0 auto;
+      padding : 0;
+      color: gray;
+      letter-spacing : .5px;
+      vertical-align : middle;
+    }
+  }
+}
+
+main {
+  padding : 1em 0;
+  background-color : #fff;
+  flex-grow : 1;
+	width : 100%;
+  section, article {
+    padding : 1em 0;
+    margin-bottom : 2em;
+  }
+}

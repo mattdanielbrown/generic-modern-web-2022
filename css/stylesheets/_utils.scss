@@ -1,0 +1,47 @@
+
+%list-reset {
+  list-style      : none none;
+  margin          : unset;
+  padding         : unset;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : flex-start;
+  width           : 100%;
+  transition      : all 200ms ease;
+
+  * { transition : all 200ms ease; }
+
+  li {
+    list-style : none none;
+    padding    : unset;
+    display    : block;
+    width      : 100%;
+    margin     : 0 auto 1em;
+  }
+
+  @media screen and (min-width : 560px) {
+    flex-direction  : row;
+    justify-content : space-between;
+    flex-wrap       : wrap;
+    gap             : 1em;
+    li {
+      display : inline-flex;
+      width   : auto;
+      margin  : 0 auto;
+    }
+  }
+}
+
+%set-focus-effect {
+  &:focus {
+    border : $focus-fx-border;
+    outline : $focus-fx-outline;
+    outline-offset : $focus-fx--offset;
+  }
+}
+
+%apply-focus-effect {
+  border         : $focus-fx-border;
+  outline        : $focus-fx-outline;
+  outline-offset : $focus-fx--offset;
+}
