@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Yarn Parcel HTML5 Boilerplate Test Site | Form Input Elements</title>
+  <meta name="description" content="Yarn Parcel HTML5 Boilerplate Test Site - Form Input Elements">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Yarn Parcel HTML5 Boilerplate Test Site - Form Input Elements">
+  <meta property="og:type" content="application/call-completion">
+  <meta property="og:url" content="https://example.com/index.html">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/main.scss">
+	<script type="module" src="app.js"></script>
+
+  <meta name="theme-color" content="#5171ED">
+
+  <!-- Reference the source files for the Inter font-family (via Google Fonts) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<!-- Skip-to-main-content anchor ——————————————————————————————————————— -->
+	<a class="skip-link" href="#main" tabindex="0">Skip to main</a>
+
+	<!-- Page Navigation ——————————————————————————————————————————————————— -->
+	<nav>
+
+		<input type="checkbox" name="mobile-nav-control" id="mobile-nav-control">
+		<label for="mobile-nav-control">Menu</label>
+
+		<ul>
+			<li><a href="index.html" tabindex="0">Home</a></li>
+			<li><a href="typography.html" tabindex="0">Typography</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="forms.html" aria-current="page" tabindex="0">Form Inputs</a></li>
+		</ul>
+	</nav>
+
+	<header>
+		<hgroup>
+			<h1>
+				Website Title
+				<small>Form Input Elements</small>
+			</h1>
+		</hgroup>
+	</header>
+
+	<main id="main">
+		<section>
+			<h2>Example Form</h2>
+
+			<form action="">
+
+				<fieldset>
+					<legend>Text-Based Inputs</legend>
+
+					<label for="text-input">Text Input</label>
+					<input type="text" name="text-input" id="text-input" placeholder="AaBbCc...">
+
+					<label for="email-input">Email Input</label>
+					<input type="email" name="email-input" id="email-input" placeholder="user@example.com">
+
+					<label for="textarea-input">Textarea Input</label>
+					<textarea name="textarea-input"
+					          id="textarea-input"
+					          cols="30"
+					          rows="10"
+					          placeholder="Multiline input..."></textarea>
+
+
+				</fieldset>
+
+				<fieldset>
+					<legend>Checkbox Inputs</legend>
+					<input type="checkbox" name="checkbox-one" id="checkbox-one" value="checkbox-one value" checked="checked">
+					<label for="checkbox-one">Checkbox One Label</label>
+
+					<input type="checkbox" name="checkbox-two" id="checkbox-two" value="checkbox-two value">
+					<label for="checkbox-two">Checkbox Two Label</label>
+
+					<input type="checkbox" name="checkbox-three" id="checkbox-three" value="checkbox-three value" disabled>
+					<label for="checkbox-three">(Disabled) Checkbox Three Label</label>
+				</fieldset>
+
+				<fieldset>
+					<legend>Radio Inputs</legend>
+
+
+					<input type="radio" name="radio-input" id="radio-input-one" value="radio input one value" checked>
+					<label for="radio-input-one">Radio Input One</label>
+
+					<input type="radio" name="radio-input" id="radio-input-two" value="radio input two value">
+					<label for="radio-input-two">Radio Input Two</label>
+
+					<input type="radio" name="radio-input" id="radio-input-three" value="radio input three value" disabled>
+					<label for="radio-input-three">Radio Input Three</label>
+
+
+				</fieldset>
+
+				<ul class="form-reset-and-submit-controls-list">
+					<li><input type="reset" value="Reset Form"></li>
+					<li><input type="submit" value="Submit Form"></li>
+				</ul>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>Copyright &copy; 2022. All Rights Reserved.</p>
+	</footer>
+
+
+  <!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Page Javascript                                                       -->
+  <!-- ————————————————————————————————————————————————————————————————————— -->
+	<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
