@@ -39,13 +39,14 @@ $transition         : all 120ms ease-out !default;
 	-webkit-tap-highlight-color: transparent !important;
 	-webkit-backface-visibility: hidden !important;
 	-webkit-border-radius: 5px !important;
+	border-radius: 5px !important;
 	-webkit-touch-callout: none !important;
 	-webkit-appearance : none !important;
 	cursor           : pointer;
 	font-weight      : 500;
 	font-size        : 1em;
 	padding          : 0.75em 0;
-	border-radius    : 0.25em;
+	
 	// background-color: #EFEFEF;
 	// border: 2px solid #EFEFEF;
 	background-color : $_this-color;
@@ -620,17 +621,20 @@ label {
 	line-height      : 1.5;
 	padding          : .5em .75em;
 	margin           : 0 auto;
-	border           : none;
-	outline          : 2px solid lightgray;
-	outline-offset   : -2px;
-	border-radius    : 5px;
+	// border           : none;
+	border          : 2px solid lightgray;
+	// outline-offset   : -2px;
 	background-color : lighten(whitesmoke, 2%);
 	vertical-align   : middle;
 	transition       : all 120ms ease-out;
 	-webkit-tap-highlight-color: transparent !important;
 	-webkit-backface-visibility : hidden !important;
 	-webkit-border-radius       : 5px !important;
+	border-radius       : 5px !important;
 	-webkit-touch-callout       : none !important;
+	backface-visibility: hidden;
+	border-corner-image : none;
+	// border-color : transparent;
 	
 	& + label {
 		// color: red !important;
