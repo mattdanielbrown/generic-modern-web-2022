@@ -622,7 +622,8 @@ label {
 	padding          : .5em .75em;
 	margin           : 0 auto;
 	// border           : none;
-	border          : 2px solid lightgray;
+	border          : 2px solid lightgray !important;
+	outline : none !important;
 	// outline-offset   : -2px;
 	background-color : lighten(whitesmoke, 2%);
 	vertical-align   : middle;
