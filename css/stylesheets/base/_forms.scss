@@ -20,32 +20,20 @@ label {
   display: block;
   font-weight: 600;
   margin-bottom: var(--spacing--small);
+  @extend %fix-ios-tap-highlight;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   display: block;
   font-family: var(--font-family);
   font-size: 1rem;
 }
 
-[type='color'],
-[type='date'],
-[type='datetime'],
-[type='datetime-local'],
-[type='email'],
-[type='month'],
-[type='number'],
-[type='password'],
-[type='search'],
-[type='tel'],
-[type='text'],
-[type='time'],
-[type='url'],
-[type='week'],
-input:not([type]),
-textarea {
+[type='color'], [type='date'], [type='datetime'], [type='datetime-local'],
+[type='email'], [type='month'], [type='number'], [type='password'],
+[type='search'], [type='tel'], [type='text'], [type='time'], [type='url'],
+[type='week'], input:not([type]), textarea {
+  @extend %fix-ios-tap-highlight;
   appearance: none;
 	-webkit-tap-highlight-color : transparent !important;
   // background-color: transparent;
@@ -78,31 +66,25 @@ textarea {
 [type='search'] {
   -webkit-appearance: textfield;
 }
-
-textarea {
-  resize: vertical;
+[type='file'] {
+  @extend %fix-ios-tap-highlight;
+  margin-bottom : var(--spacing--small);
+  width         : 100%;
 }
 
-[type='checkbox'],
-[type='radio'] {
+[type='checkbox'], [type='radio'] {
+  @extend %fix-ios-tap-highlight;
   display: inline;
   margin-right: var(--spacing--small);
 }
 
-[type='file'] {
+select {
+  @extend %fix-ios-tap-highlight;
   margin-bottom: var(--spacing--small);
   width: 100%;
 }
 
-select {
-  margin-bottom: var(--spacing--small);
-  width: 100%;
-}
-
-[type='checkbox'],
-[type='radio'],
-[type='file'],
-select {
+[type='checkbox'], [type='radio'], [type='file'], select {
   &:focus {
     outline: var(--focus-outline);
     outline-offset: var(--focus-outline-offset);

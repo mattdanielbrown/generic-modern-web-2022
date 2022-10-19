@@ -9,3 +9,18 @@
 @import 'typography';
 @import 'components';
 @import 'temp';
+
+a {
+	border : none !important;
+}
+nav a[aria-current='page'], nav a:visited[aria-current='page'],
+nav a:link[aria-current='page'], nav *[aria-current='page'],
+nav [aria-current='page'], a[aria-current='page'], [aria-current='page'] {
+	border : 0 !important;
+	cursor           : not-allowed;
+	// background-color : #252b38 !important;
+	background-color : red !important;
+	color            : rgba(white, 0.5) !important;
+	pointer-events   : none !important;
+	tab-index: -1 !important;
+}

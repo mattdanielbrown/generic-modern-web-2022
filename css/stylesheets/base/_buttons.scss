@@ -1,40 +1,121 @@
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  appearance: none;
-  background-color: $action-color;
-  border: 0;
-  border-radius: var(--border-radius);
-  color: $action-color--contrast;
-  cursor: pointer;
-  display: inline-block;
-  font-family: var(--font-family-base);
-  font-size: 1rem;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 600;
-  line-height: 1;
-  padding: var(--spacing--small) var(--spacing);
-  text-align: center;
-  text-decoration: none;
-  transition: all var(--duration) var(--timing);
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
+/* Button and Button-like Control Style Definition */
+%button {
+	$_this-color     : #ddd;
+	
+	// $_focus-fx-color:$primary-primary;
+	
+	appearance       : none !important;
+	-webkit-tap-highlight-color: rgba(0,0,0,0.0) !important;
+	vertical-align   : middle;
+	user-select      : none;
+	cursor           : pointer;
+	font-weight      : 600;
+	font-size        : 1em;
+	padding          : 0.75em;
+	border-radius    : 0.3em;
+	letter-spacing   : .5px;
+	// background-color: #EFEFEF;
+	// border: 2px solid #EFEFEF;
+	background-color : $_this-color;
+	outline          : 2px solid $_this-color;
+  outline-offset   : -2px;
+  border           : none;
+	font-family      : inherit;
+	transform        : translate3d(0, 0, 0);
+	transition       : all 120ms ease-out;
+	
+	display          : block;
+	width            : 100%;
+	margin           : 0 0 1.5em;
+	line-height      : 1.25;
+	
+	@media screen and (min-width : 560px) {
+		line-height : 1.5;
+		padding     : .5em 1em;
+		display     : inline-block;
+		width       : unset;
+		min-width   : 6.5em;
+	}
+	
+	&:hover {
+		$_this-color     : darken($_this-color, 5%);
+		background-color : $_this-color;
+		outline-color     : $_this-color;
+		-webkit-tap-highlight-color : rgba(0, 0, 0, 0.0) !important;
+	}
+	&:focus {
+		$_this-color     : darken($_this-color, 10%);
+		background-color : $_this-color;
+		// border-color: $_this-color;
+		// border-color: $primary-color;
+    outline-color     : $color--primary;
+    box-shadow : 0 0 0 3px rgba($_focus-fx-color, 0.2);
+		-webkit-tap-highlight-color : rgba(0, 0, 0, 0.0) !important;
+	}
+	&:active {
+		$_this-color     : darken($_this-color, 15%);
+		background-color : $_this-color;
+		outline-color     : $_this-color;
+		transform        : translate3d(0, 2px, 0);
+		-webkit-tap-highlight-color : rgba(0, 0, 0, 0.0) !important;
+	}
+}
 
-	-webkit-tap-highlight-color : transparent !important;
-
-  &:hover {
-    background-color: $action-color--alt;
+/* Apply Button and Button-like Control Styles */
+button, .button, [role='button'], [type='button'],
+[type='reset'], [type='submit'] {
+	@extend %button;
+  &.primary {
+    $_this-color : $primary-color;
+    background-color : $_this-color;
+    outline-color    : $_this-color;
+    color: white;
+    &:hover {
+      $_this-color     : darken($_this-color, 5%);
+      background-color : $_this-color;
+      outline-color    : $_this-color;
+    }
+    &:focus {
+      $_this-color     : darken($_this-color, 10%);
+      background-color : $_this-color;
+      // border-color: $_this-color;
+      // border-color: $primary-color;
+      outline-color    : $color--primary;
+      box-shadow       : 0 0 0 3px rgba($_focus-fx-color, 0.2);
+    }
+    &:active {
+      $_this-color     : darken($_this-color, 15%);
+      background-color : $_this-color;
+      outline-color    : $_this-color;
+      transform        : translate3d(0, 2px, 0);
+    }
   }
-
-  &:focus {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-outline-offset);
+  &.secondary {
+    $_this-color : $secondary-color;
+    background-color : $_this-color;
+    outline-color    : $_this-color;
+    color        : white;
+    &:hover {
+      $_this-color     : darken($_this-color, 5%);
+      background-color : $_this-color;
+      outline-color    : $_this-color;
+    }
+    &:focus {
+      $_this-color     : darken($_this-color, 10%);
+      background-color : $_this-color;
+      // border-color: $_this-color;
+      // border-color: $primary-color;
+      outline-color    : $color--primary;
+      box-shadow       : 0 0 0 3px rgba($_focus-fx-color, 0.2);
+    }
+    &:active {
+      $_this-color     : darken($_this-color, 15%);
+      background-color : $_this-color;
+      outline-color    : $_this-color;
+      transform        : translate3d(0, 2px, 0);
+    }
   }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
+	&.round,&.rounded {
+		border-radius : 2em !important;
+	}
 }

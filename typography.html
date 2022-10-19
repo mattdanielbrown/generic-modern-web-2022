@@ -32,14 +32,18 @@
 
 <body class="typography-page--body" id="typography-page--body">
 
-	<!-- Skip-to-main-content anchor ——————————————————————————————————————— -->
+	<!-- Skip-to-main-content anchor ————————————————————————————————————————— -->
 	<a class="skip-link" href="#main" tabindex="0">Skip to main</a>
-
-	<!-- Page Navigation ——————————————————————————————————————————————————— -->
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Site/Page Navigation 																								 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
 	<nav>
-
-		<input type="checkbox" name="mobile-nav-control" id="mobile-nav-control">
-		<label for="mobile-nav-control">Menu</label>
+		
+		<div class="mobile-navigation-control-wrapper">
+			<input type="checkbox" name="mobile-nav-control" id="mobile-nav-control">
+			<label for="mobile-nav-control" id="mobile-nav-control-label">Menu</label>
+		</div>
 
 		<ul>
 			<li><a href="index.html" tabindex="0">Home</a></li>
@@ -48,33 +52,43 @@
 			<li><a href="forms.html" tabindex="0">Form Inputs</a></li>
 		</ul>
 	</nav>
-
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Site/Page Header 																										 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
 	<header>
 		<hgroup>
 			<h1>
-				Website Title
+				Mobile Web 2022
 				<small>Typography</small>
 			</h1>
 		</hgroup>
 	</header>
-
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Main Page Content  																									 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
 	<main id="main">
-		<section>
+		<section id="base-typographic-styles">
 			<h2>Base Typographic Styles</h2>
 
 			<h3>Base ('Body' or 'Paragraph')</h3>
 			<div class="demo-paragraph">
-				<p>This is the base ("Body", or "Parapgaph") style... </p>
+				<p>This is the base ("Body", or "Parapgaph") style...
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				   Commodi esse ex nulla odit porro possimus tempora ullam veniam
+				   voluptate voluptatibus? Dolor est ipsam necessitatibus officia
+				   voluptate. Eveniet repudiandae temporibus voluptate.</p>
 			</div>
 
 			<h3>Headings</h3>
 			<hgroup class="demo-heading-group">
-				<h1>This is heading level 1</h1>
-				<h2>This is heading level 2</h2>
-				<h3>This is heading level 3</h3>
-				<h4>This is heading level 4</h4>
-				<h5>This is heading level 5</h5>
-				<h6>This is heading level 6</h6>
+				<h1>Heading level 1</h1>
+				<h2>Heading level 2</h2>
+				<h3>Heading level 3</h3>
+				<h4>Heading level 4</h4>
+				<h5>Heading level 5</h5>
+				<h6>Heading level 6</h6>
 			</hgroup>
 		</section>
 		<section>
@@ -98,12 +112,14 @@
 			</div>
 		</section>
 	</main>
-
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Page Javascript                                                       -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
 	<footer>
 		<p>Copyright &copy; 2022. All Rights Reserved.</p>
 	</footer>
-
-
+	
   <!-- ————————————————————————————————————————————————————————————————————— -->
 	<!-- Page Javascript                                                       -->
   <!-- ————————————————————————————————————————————————————————————————————— -->

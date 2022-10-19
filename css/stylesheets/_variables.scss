@@ -75,28 +75,28 @@ $perfume                 : #cdc1fa;
 $portage-1               : #ac9af5;
 $portage-2               : #917af2;
 $cornflower-blue         : #7d64ee;
-$royal-blue              : #7257e9;
-$royal-blue-1            : #6950df;
-$purple-heart            : #6048d1;
-$blue-violet             : #5943bd;
-$hawkes-blue             : #eef2fe;
-$hawkes-blue-1           : #dce4fd;
-$tropical-blue           : #bcc8fb;
-$jordy-blue              : #94a8f8;
-$cornflower-blue-2       : #7891f5;
-$cornflower-blue-3       : #617ef2;
-$royal-blue              : #5171ed;
-$royal-blue-1            : #4766e3;
-$mariner                 : #405ed3;
-$governor-bay            : #3952c0;
-$solitude                : #e9f5fe;
-$hawkes-blue             : #d5eafd;
-$sail                    : #afd7fb;
-$malibu                  : #84bff7;
-$cornflower-blue-2       : #64aaf1;
-$cornflower-blue-3       : #509ae9;
-$havelock-blue           : #428bdf;
-$mariner                 : #3a7ecf;
+$royal-blue        : #7257e9;
+$royal-blue-1      : #6950df;
+$purple-heart      : #6048d1;
+$blue-violet       : #5943bd;
+$hawkes-blue       : #eef2fe;
+$hawkes-blue-1     : #dce4fd;
+$tropical-blue     : #bcc8fb;
+$jordy-blue        : #94a8f8;
+$cornflower-blue-2 : #7891f5;
+$cornflower-blue-3 : #617ef2;
+$royal-blue        : #6000ff;
+$royal-blue-1      : #4766e3;
+$mariner           : #405ed3;
+$governor-bay      : #3952c0;
+$solitude          : #e9f5fe;
+$hawkes-blue       : #d5eafd;
+$sail              : #afd7fb;
+$malibu            : #84bff7;
+$cornflower-blue-2 : #64aaf1;
+$cornflower-blue-3 : #509ae9;
+$havelock-blue     : #428bdf;
+$mariner           : #3a7ecf;
 $astral                  : #3471bc;
 $azure                   : #2e64a6;
 $white-ice               : #e7f9fb;
@@ -165,7 +165,8 @@ $color--success          : $fern;
 /* Specific */
 
 $text-color              : $dark-gray-blue;
-$navbar-color            : $shark;
+// $navbar-color            : $shark;
+$navbar-color            : $dark-gray-blue;
 
 //——————————————————————————————————————————————————————————————————————————————
 // Values
@@ -173,9 +174,9 @@ $navbar-color            : $shark;
 
 /* Interaction Adjustments */
 
-$hover-color-adjustment  : 8%;
-$focus-color-adjustment  : 16%;
-$active-color-adjustment : 24%;
+$hover-color-adjustment  : 5%;
+$focus-color-adjustment  : 10%;
+$active-color-adjustment : 15%;
 
 /* Focus Effect Values */
 

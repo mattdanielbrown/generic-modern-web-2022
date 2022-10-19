@@ -22,20 +22,20 @@
   @return darken($color, $hover-color-adjustment);
 }
 @function focus-color($color:$primary-color) {
-  @return darken($color, $hover-color-adjustment);
+  @return darken($color, $focus-color-adjustment);
 }
 @function active-color($color:$primary-color) {
-  @return darken($color, $hover-color-adjustment);
+  @return darken($color, $active-color-adjustment);
 }
 
 @function hoverColor($color:$primary-color) {
   @return darken($color, $hover-color-adjustment);
 }
 @function focusColor($color:$primary-color) {
-  @return darken($color, $hover-color-adjustment);
+  @return darken($color, $focus-color-adjustment);
 }
 @function activeColor($color:$primary-color) {
-  @return darken($color, $hover-color-adjustment);
+  @return darken($color, $active-color-adjustment);
 }
 
 @function action-adjusted-color($color: $primary-color, $action: hover) {

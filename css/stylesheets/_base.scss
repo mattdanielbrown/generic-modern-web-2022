@@ -1,4 +1,11 @@
 
+html,body {
+	background-color : #222529;
+}
+::backdrop {
+	background-color : #222529;
+}
+
 .demo-heading-group {
 	hgroup {
 		margin : 0 auto !important;

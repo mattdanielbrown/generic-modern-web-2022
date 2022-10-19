@@ -3,58 +3,60 @@
 // Media Queries
 //——————————————————————————————————————————————————————————————————————————————
 
-@mixin at-least($device-width) {
+$device-width:600px;
+
+@mixin at-least($device-width:560px) {
   @media screen and (min-width : $device-width) {
     @content
   }
 }
-@mixin atLeast($device-width) {
+@mixin atLeast($device-width:560px) {
   @media screen and (min-width : $device-width) {
     @content
   }
 }
-@mixin after($device-width) {
+@mixin after($device-width:560px) {
   @media screen and (min-width : $device-width) {
     @content
   }
 }
-@mixin smaller-than($device-width) {
+@mixin smaller-than($device-width:560px) {
   @media screen and (min-width : $device-width) {
     @content
   }
 }
-@mixin smallerThan($device-width) {
+@mixin smallerThan($device-width:560px) {
   @media screen and (min-width : $device-width) {
     @content
   }
 }
 
-@mixin up-until($device-width) {
+@mixin up-until($device-width:560px) {
   @media screen and (max-width : $device-width - 1) {
     @content
   }
 }
-@mixin upUntil($device-width) {
+@mixin upUntil($device-width:560px) {
   @media screen and (max-width : $device-width - 1) {
     @content
   }
 }
-@mixin until($device-width) {
+@mixin until($device-width:560px) {
   @media screen and (max-width : $device-width - 1) {
     @content
   }
 }
-@mixin before($device-width) {
+@mixin before($device-width:560px) {
   @media screen and (max-width : $device-width - 1) {
     @content
   }
 }
-@mixin larger-than($device-width) {
+@mixin larger-than($device-width:560px) {
   @media screen and (max-width : $device-width - 1) {
     @content
   }
 }
-@mixin largerThan($device-width) {
+@mixin largerThan($device-width:560px) {
   @media screen and (max-width : $device-width - 1) {
     @content
   }
@@ -105,15 +107,19 @@
   $_hover-color    : hover-color($color);
   $_focus-color    : focus-color($color);
   $_active-color   : active-color($color);
-  border-color : $_original-color;
+  // border-color : $_original-color;
+  outline-color   : $_original-color;
+  outline-offset  : -2px;
   &:hover {
-    border-color : $_hover-color;
+    // border-color : $_hover-color;
+    outline-color : $_hover-color;
   }
   &:focus {
     // border-color : $_focus-color;
   }
   &:active {
-    border-color : $_active-color;
+    // border-color : $_active-color;
+    outline-color : $_active-color;
   }
 }
 @mixin set-adjusted-text-colors($color: $primary-color) {

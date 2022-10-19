@@ -1,24 +1,35 @@
 // Colors
-$blue: #1565c0 !default;
+$blue: #602cff !default;
 $blue-light: #3b83d5 !default;
 $gray: #333;
 $white: #fff;
 
-$blue       : $royal-blue-1;
+$blue       : $blue;
 $blue-light : $royal-blue;
 
 // Font Colors
 $font-color--base: $gray;
-$action-color: $blue !default;
 $action-color--alt: $blue-light !default;
 $action-color--contrast: $white;
-
+$action-color: $blue;
 
 
 // Background Colors
 $viewport-background-color: $white !default;
-
+$_focus-fx-color : $primary-color;
 $viewport-background-color: #222529;
+$action-color: $blue !default;
+
+
+
+/* Import webfont files for the Inter font-family from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Fontstacks */
+$fontstack--fallback : -apple-system, system-ui, BlinkMacSystemFont,'Segoe UI',
+Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$fontstack--inter    : 'Inter','Inter UI',Inter,Inter UI;
+$fontstack           : $fontstack--inter, $fontstack--fallback;
 
 :root {
   // Typography

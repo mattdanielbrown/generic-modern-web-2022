@@ -31,99 +31,143 @@
 </head>
 
 <body>
-
-	<!-- Skip-to-main-content anchor ——————————————————————————————————————— -->
+	
+	<!-- Skip-to-main-content anchor ————————————————————————————————————————— -->
 	<a class="skip-link" href="#main" tabindex="0">Skip to main</a>
-
-	<!-- Page Navigation ——————————————————————————————————————————————————— -->
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Site/Page Navigation 																								 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
 	<nav>
-
-		<input type="checkbox" name="mobile-nav-control" id="mobile-nav-control">
-		<label for="mobile-nav-control">Menu</label>
+		
+		<div class="mobile-navigation-control-wrapper">
+			<input type="checkbox" name="mobile-nav-control" id="mobile-nav-control">
+			<label for="mobile-nav-control" id="mobile-nav-control-label">Menu</label>
+		</div>
 
 		<ul>
 			<li><a href="index.html" tabindex="0">Home</a></li>
 			<li><a href="typography.html" tabindex="0">Typography</a></li>
-			<li><a href="buttons.html">Buttons</a></li>
-			<li><a href="forms.html" aria-current="page" tabindex="0">Form Inputs</a></li>
+			<li><a href="buttons.html" tabindex="0">Buttons</a></li>
+			<li><a href="forms.html" aria-current="page" tabindex="-1">Form Inputs</a></li>
 		</ul>
 	</nav>
-
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Site/Page Header 																										 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
 	<header>
 		<hgroup>
 			<h1>
-				Website Title
+				Mobile Web 2022
 				<small>Form Input Elements</small>
 			</h1>
 		</hgroup>
 	</header>
-
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Main Page Content  																									 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
 	<main id="main">
-		<section>
+		<section id="form">
 			<h2>Example Form</h2>
-
-			<form action="">
-
+			
+			<form action="" id="demo-form" name="demo-form">
 				<fieldset>
-					<legend>Text-Based Inputs</legend>
-
+					<legend>Text-based Inputs</legend>
+					
 					<label for="text-input">Text Input</label>
-					<input type="text" name="text-input" id="text-input" placeholder="AaBbCc...">
-
+					<input type="text" name="text-input" id="text-input" placeholder="Abc..." maxlength="50">
+					
 					<label for="email-input">Email Input</label>
-					<input type="email" name="email-input" id="email-input" placeholder="user@example.com">
-
+					<input type="email" name="email-input" id="email-input" placeholder="username@example.com" maxlength="200">
+					
+					<label for="number-input">Numeric Input</label>
+					<input type="number" name="number-input" id="number-input" placeholder="1234..." maxlength="20">
+					
+					<label for="search-input">Search Input</label>
+					<input type="search" name="search-input" id="search-input" placeholder="{search query [parameters]}..." maxlength="50">
+					
+					<label for="url-input">URL Input</label>
+					<input type="url" name="url-input" id="url-input" placeholder="https://example.com..." maxlength="100">
+					
 					<label for="textarea-input">Textarea Input</label>
-					<textarea name="textarea-input"
-					          id="textarea-input"
-					          cols="30"
-					          rows="10"
-					          placeholder="Multiline input..."></textarea>
-
-
+					<textarea name="textarea-input" id="textarea-input" cols="30" rows="10" placeholder="Multiline textual input..."></textarea>
+				
 				</fieldset>
-
+				<fieldset>
+					<legend>Date &amp; Time Inputs</legend>
+					
+					<label for="date-input">Date Input</label>
+					<input type="date" id="date-input" name="date-input">
+					
+					<label for="time-input">Time Input</label>
+					<input type="time" id="time-input" name="time-input">
+					
+					<label for="datetime-local-input">Datetime Input</label>
+					<input type="datetime-local" id="datetime-local-input" name="datetime-local-input">
+				</fieldset>
 				<fieldset>
 					<legend>Checkbox Inputs</legend>
-					<input type="checkbox" name="checkbox-one" id="checkbox-one" value="checkbox-one value" checked="checked">
-					<label for="checkbox-one">Checkbox One Label</label>
-
-					<input type="checkbox" name="checkbox-two" id="checkbox-two" value="checkbox-two value">
-					<label for="checkbox-two">Checkbox Two Label</label>
-
-					<input type="checkbox" name="checkbox-three" id="checkbox-three" value="checkbox-three value" disabled>
-					<label for="checkbox-three">(Disabled) Checkbox Three Label</label>
+					<ul class="checkbox-list">
+						<li>
+							<input type="checkbox" name="checkbox-input-one"
+							       id="checkbox-input-one"
+							       value="Checkbox Input One Value" checked>
+							<label for="checkbox-input-one">Checkbox Input One</label>
+						</li>
+						<li>
+							<input type="checkbox" name="checkbox-input-two"
+							       id="checkbox-input-two"
+							       value="Checkbox Input Two Value">
+							<label for="checkbox-input-two">Checkbox Input Two</label>
+						</li>
+						<li>
+							<input type="checkbox" name="checkbox-input-three"
+							       id="checkbox-input-three"
+							       value="Checkbox Input Three Value">
+							<label for="checkbox-input-three">Checkbox Input Three</label>
+						</li>
+					</ul>
 				</fieldset>
-
 				<fieldset>
 					<legend>Radio Inputs</legend>
-
-
-					<input type="radio" name="radio-input" id="radio-input-one" value="radio input one value" checked>
-					<label for="radio-input-one">Radio Input One</label>
-
-					<input type="radio" name="radio-input" id="radio-input-two" value="radio input two value">
-					<label for="radio-input-two">Radio Input Two</label>
-
-					<input type="radio" name="radio-input" id="radio-input-three" value="radio input three value" disabled>
-					<label for="radio-input-three">Radio Input Three</label>
-
-
+					<ul class="radio-list">
+						<li>
+							<input type="radio" id="radio-input-one"
+							       name="radio-input"
+							       value="Radio Input One Value" checked>
+							<label for="radio-input-one">Radio Input One</label>
+						</li>
+						<li>
+							<input type="radio" id="radio-input-two"
+							       name="radio-input"
+							       value="Radio Input Two Value">
+							<label for="radio-input-two">Radio Input Two</label>
+						</li>
+						<li>
+							<input type="radio" id="radio-input-three"
+							       name="radio-input"
+							       value="Radio Input Three Value">
+							<label for="radio-input-three">Radio Input Three</label>
+						</li>
+					</ul>
 				</fieldset>
-
-				<ul class="form-reset-and-submit-controls-list">
-					<li><input type="reset" value="Reset Form"></li>
-					<li><input type="submit" value="Submit Form"></li>
+				<ul class="bottom-form-controls">
+					<li><input type="submit" value="Submit"></li>
+					<li><input type="reset" value="Reset"></li>
 				</ul>
 			</form>
 		</section>
 	</main>
-
+	
+	<!-- ————————————————————————————————————————————————————————————————————— -->
+	<!-- Site/Page Footer 																										 -->
+	<!-- ————————————————————————————————————————————————————————————————————— -->
 	<footer>
 		<p>Copyright &copy; 2022. All Rights Reserved.</p>
 	</footer>
-
-
+	
   <!-- ————————————————————————————————————————————————————————————————————— -->
 	<!-- Page Javascript                                                       -->
   <!-- ————————————————————————————————————————————————————————————————————— -->

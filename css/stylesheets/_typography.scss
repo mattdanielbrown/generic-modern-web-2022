@@ -7,7 +7,7 @@ figure, summary, details, address {
   margin      : 0;
   padding     : 0;
   display     : block;
-  font-family : $font-family;
+  font-family : $fontstack;
 }
 
 p {
@@ -21,14 +21,16 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height : 1;
+  // line-height : 1;
   font-weight : 600;
   margin      : 1rem auto;
   /* color: #454545; */
   small {
+    width : 100%;
     display     : block;
     font-weight : 500;
     margin-top  : .5rem;
+    font-size : smaller;
   }
 }
 
