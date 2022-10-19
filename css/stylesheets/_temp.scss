@@ -35,7 +35,12 @@ $transition         : all 120ms ease-out !default;
 	
 	appearance       : none;
 	vertical-align   : middle;
-	user-select      : none;
+	user-select      : none !important;
+	-webkit-tap-highlight-color: transparent !important;
+	-webkit-backface-visibility: hidden !important;
+	-webkit-border-radius: 5px !important;
+	-webkit-touch-callout: none !important;
+	-webkit-appearance : none !important;
 	cursor           : pointer;
 	font-weight      : 500;
 	font-size        : 1em;
@@ -273,6 +278,11 @@ a, a:link {
 	letter-spacing  : 0.25px;
 	vertical-align  : baseline;
 	text-align      : center;
+	
+	-webkit-tap-highlight-color : transparent !important;
+	-webkit-backface-visibility : hidden !important;
+	// -webkit-border-radius       : 5px !important;
+	-webkit-touch-callout       : none !important;
 	
 	&:hover {
 		color : darken($primary-color, 10%);
@@ -600,6 +610,7 @@ label {
 [type='number'], [type='password'],
 [type='text'], [type='time'], [type='url'],
 [type='week'], input:not([type]), textarea {
+	-webkit-appearance : none !important;
 	appearance       : none;
 	display          : block;
 	width            : 100%;
@@ -617,6 +628,10 @@ label {
 	background-color : lighten(whitesmoke, 2%);
 	vertical-align   : middle;
 	transition       : all 120ms ease-out;
+	-webkit-tap-highlight-color: transparent !important;
+	-webkit-backface-visibility : hidden !important;
+	-webkit-border-radius       : 5px !important;
+	-webkit-touch-callout       : none !important;
 	
 	& + label {
 		// color: red !important;
@@ -755,6 +770,10 @@ textarea {
 	transition : all 120ms ease-out;
 	cursor     : pointer;
 	margin     : 0 auto 1rem !important;
+	-webkit-tap-highlight-color : transparent !important;
+	-webkit-backface-visibility : hidden !important;
+	-webkit-border-radius       : 5px !important;
+	-webkit-touch-callout       : none !important;
 	
 	& ~ label {
 		font-weight : 400;
@@ -762,7 +781,10 @@ textarea {
 		transition  : all 120ms ease-out;
 		display     : block !important;
 		width       : 100% !important;
-		
+		-webkit-tap-highlight-color : transparent !important;
+		-webkit-backface-visibility : hidden !important;
+		-webkit-border-radius       : 5px !important;
+		-webkit-touch-callout       : none !important;
 		//noinspection CssInvalidPropertyValue
 		&::before {
 			background-color    : #e8e8e8;
@@ -783,6 +805,10 @@ textarea {
 			background-repeat   : no-repeat;
 			// background-size: contain;
 			background-size     : 0;
+			-webkit-tap-highlight-color : transparent !important;
+			-webkit-backface-visibility : hidden !important;
+			-webkit-border-radius       : 5px !important;
+			-webkit-touch-callout       : none !important;
 		}
 	}
 	
