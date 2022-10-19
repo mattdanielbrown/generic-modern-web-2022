@@ -107,19 +107,19 @@ $device-width:600px;
   $_hover-color    : hover-color($color);
   $_focus-color    : focus-color($color);
   $_active-color   : active-color($color);
-  // border-color : $_original-color;
-  outline-color   : $_original-color;
-  outline-offset  : -2px;
+  border-color : $_original-color;
+  // outline-color   : $_original-color;
+  // outline-offset  : -2px;
   &:hover {
-    // border-color : $_hover-color;
-    outline-color : $_hover-color;
+    border-color : $_hover-color;
+    // outline-color : $_hover-color;
   }
   &:focus {
     // border-color : $_focus-color;
   }
   &:active {
-    // border-color : $_active-color;
-    outline-color : $_active-color;
+    border-color : $_active-color;
+    // outline-color : $_active-color;
   }
 }
 @mixin set-adjusted-text-colors($color: $primary-color) {

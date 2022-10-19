@@ -48,10 +48,9 @@ $transition         : all 120ms ease-out !default;
 	border-radius    : 0.25em;
 	// background-color: #EFEFEF;
 	// border: 2px solid #EFEFEF;
-	border           : none !important;
 	background-color : $_this-color;
-	outline          : 2px solid $_this-color;
-	outline-offset   : -2px;
+	border          : 2px solid $_this-color;
+	// outline-offset   : -2px;
 	font-family      : inherit;
 	transform        : translate3d(0, 0, 0);
 	transition       : all 150ms ease;
@@ -75,14 +74,14 @@ $transition         : all 120ms ease-out !default;
 	&:hover {
 		$_this-color     : darken($_this-color, 8%);
 		background-color : $_this-color;
-		outline-color    : $_this-color;
+		border-color    : $_this-color;
 	}
 	&:focus {
 		$_this-color     : darken($_this-color, 8%);
 		background-color : $_this-color;
 		// border-color: $_this-color;
 		// border-color: $primary-color;
-		outline-color    : $color--primary;
+		border-color    : $color--primary;
 		// outline: 6px solid rgba($_focus-fx-color, 0.2);
 		// outline-offset: -2px;
 		box-shadow       : 0 0 0 3px rgba($_focus-fx-color, 0.2);
@@ -90,7 +89,7 @@ $transition         : all 120ms ease-out !default;
 	&:active {
 		$_this-color     : darken($_this-color, 8%);
 		background-color : $_this-color;
-		outline-color    : $_this-color;
+		border-color    : $_this-color;
 		transform        : translate3d(0, 2px, 0);
 	}
 }
@@ -270,7 +269,7 @@ a, a:link {
 	cursor          : pointer;
 	transition      : background-color 120ms ease-out,
 										color 120ms ease-out,
-										outline-color 120ms ease-out;
+										border-color 120ms ease-out;
 	text-decoration : none !important;
 	font-size       : 1em;
 	line-height     : inherit;
@@ -306,7 +305,7 @@ button,.button,[role='button'],[type='button'],[type='reset'],[type='submit'] {
 	&.primary {
 		$_this-color     : $primary-color;
 		background-color : $_this-color;
-		outline-color    : $_this-color;
+		border-color    : $_this-color;
 		color            : white;
 		
 		&:hover {
@@ -317,36 +316,36 @@ button,.button,[role='button'],[type='button'],[type='reset'],[type='submit'] {
 		&:focus {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
-			outline-color    : $color--primary;
+			border-color    : $color--primary;
 			
 		}
 		&:active {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
-			outline-color    : $_this-color;
+			border-color    : $_this-color;
 			transform        : translate3d(0, 2px, 0);
 		}
 	}
 	&.secondary {
 		$_this-color     : $secondary-color;
 		background-color : $_this-color;
-		outline-color    : $_this-color;
+		border-color    : $_this-color;
 		color            : white;
 		
 		&:hover {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
-			outline-color    : $_this-color;
+			border-color    : $_this-color;
 		}
 		&:focus {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
-			outline-color    : $color--primary;
+			border-color    : $color--primary;
 		}
 		&:active {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : $_this-color;
-			outline-color    : $_this-color;
+			border-color    : $_this-color;
 			transform        : translate3d(0, 2px, 0);
 		}
 	}
@@ -360,7 +359,7 @@ button,.button,[role='button'],[type='button'],[type='reset'],[type='submit'] {
 	&.outline, &.ghost {
 		$_this-color     : #555;
 		background-color : rgba($_this-color, 0);
-		outline-color    : $_this-color;
+		border-color    : $_this-color;
 		color            : $_this-color;
 		font-weight      : 400 !important;
 		letter-spacing   : 0.75px !important;
@@ -368,43 +367,43 @@ button,.button,[role='button'],[type='button'],[type='reset'],[type='submit'] {
 		&:hover {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : rgba($_this-color, 0.1);
-			outline-color    : $_this-color;
+			border-color    : $_this-color;
 		}
 		&:focus {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : rgba($_this-color, 0.2);
-			outline-color    : $color--primary;
+			border-color    : $color--primary;
 		}
 		&:active {
 			$_this-color     : darken($_this-color, 8%);
 			background-color : rgba($_this-color, 0.3);
-			outline-color    : $_this-color;
+			border-color    : $_this-color;
 			transform        : translate3d(0, 2px, 0);
 		}
 		
 		&.primary {
 			$_this-color     : $primary-color;
 			background-color : $_this-color;
-			outline-color    : $_this-color;
+			border-color    : $_this-color;
 			color            : white;
 			
 			&:hover {
 				$_this-color     : darken($_this-color, 8%);
 				background-color : $_this-color;
-				outline-color    : $_this-color;
+				border-color    : $_this-color;
 			}
 			
 			&:focus {
 				$_this-color     : darken($_this-color, 8%);
 				background-color : $_this-color;
-				outline-color    : $color--primary;
+				border-color    : $color--primary;
 				
 			}
 			
 			&:active {
 				$_this-color     : darken($_this-color, 8%);
 				background-color : $_this-color;
-				outline-color    : $_this-color;
+				border-color    : $_this-color;
 				transform        : translate3d(0, 2px, 0);
 			}
 		}
@@ -417,20 +416,20 @@ button,.button,[role='button'],[type='button'],[type='reset'],[type='submit'] {
 			&:hover {
 				$_this-color     : darken($_this-color, 8%);
 				background-color : $_this-color;
-				outline-color    : $_this-color;
+				border-color    : $_this-color;
 			}
 			
 			&:focus {
 				$_this-color     : darken($_this-color, 8%);
 				background-color : $_this-color;
-				outline-color    : $color--primary;
+				border-color    : $color--primary;
 				
 			}
 			
 			&:active {
 				$_this-color     : darken($_this-color, 8%);
 				background-color : $_this-color;
-				outline-color    : $_this-color;
+				border-color    : $_this-color;
 				transform        : translate3d(0, 2px, 0);
 			}
 		}
@@ -488,21 +487,21 @@ nav {
 				&:hover {
 					// color            : darken(white, 8%);
 				background-color : darken($navbar-color, 5%) !important;
-					outline-color : darken($navbar-color, 5%) !important;
+					border-color : darken($navbar-color, 5%) !important;
 					outline-offset : -2px;
 				}
 				
 				&:focus {
 					// color            : darken(white, 16%);
 					background-color : darken($navbar-color, 10%) !important;
-					outline-color : $primary-color !important;
+					border-color : $primary-color !important;
 					outline-offset : -2px;
 				}
 				
 				&:active {
 					// color            : darken(white, 24%);
 					background-color : darken($navbar-color, 15%) !important;
-					outline-color : darken($navbar-color, 15%) !important;
+					border-color : darken($navbar-color, 15%) !important;
 					outline-offset : -2px;
 				}
 				
@@ -510,7 +509,7 @@ nav {
 					border : none;
 					color            : rgba(white, .25) !important;
 					background-color : darken($navbar-color, 4%) !important;
-					outline-color : darken($navbar-color, 4%) !important;
+					border-color : darken($navbar-color, 4%) !important;
 					cursor           : not-allowed;
 					pointer-events   : none;
 					tab-index      : -1 !important;
@@ -640,18 +639,18 @@ label {
 	}
 	
 	&:hover {
-		outline-color    : darken(lightgray, 5%);
+		border-color    : darken(lightgray, 5%);
 		background-color : darken(#fafafa, 5%);
 	}
 	
 	&:focus {
-		outline-color    : $primary-color;
+		border-color    : $primary-color;
 		background-color : darken(#fafafa, 10%);
 		box-shadow       : 0 0 0 3px rgba($primary-color, 0.2);
 	}
 	
 	&:active {
-		outline-color    : darken(lightgray, 15%);
+		border-color    : darken(lightgray, 15%);
 		background-color : darken(#fafafa, 15%);
 	}
 }
@@ -955,8 +954,8 @@ textarea {
 	border-radius : 2em;
 	height        : .5em;
 	// outline: none;   .
-	// border: 2px solid darken(blue, 1%);
-	border        : none;
+	border: 2px solid darken(blue, 1%);
+	// border        : none;
 	cursor        : pointer;
 	
 	&:out-of-range {
@@ -1031,7 +1030,7 @@ textarea {
 									transform 120ms ease-out,
 									background-color 120ms ease-out,
 									color 120ms ease-out,
-									outline-color 120ms ease-out;
+									border-color 120ms ease-out;
 		height     : 2.75em !important;
 		position   : relative;
 		
